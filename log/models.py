@@ -34,3 +34,8 @@ class LogItem(models.Model):
 
   def __str__(self):
     return self.subject
+
+  # 根據 status 的值傳回對應的 class 字串, 
+  # 0 傳回 'danger', 1 傳回 'warning', 2 傳回 'success'
+  def get_status_class(self):
+    return ['danger', 'warning', 'success'][self.status]
