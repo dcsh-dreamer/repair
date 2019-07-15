@@ -16,7 +16,7 @@ class LogView(DetailView):
 
 class LogCreate(CreateView):
   model = LogItem
-  fields = ['subject', 'description', 'reporter', 'phone']
+  fields = ['subject', 'description', 'reporter', 'phone', 'picture']
 
   def get_success_url(self):
     return reverse('log_list')

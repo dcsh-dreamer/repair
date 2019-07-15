@@ -31,6 +31,8 @@ class LogItem(models.Model):
   comment = models.TextField('處理說明')
   # 最後更新時間
   utime = models.DateTimeField('最後更新時間', auto_now=True)
+  # 照片
+  picture = models.ImageField('照片', blank=True, null=True)
 
   def __str__(self):
     return self.subject
