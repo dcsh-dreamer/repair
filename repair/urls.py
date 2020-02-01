@@ -23,9 +23,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('log/', include('log.urls')),
     path('', RedirectView.as_view(url='log/')),
-    path('account/', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('staff/', include('staff.urls')),
 ]
 
-# 底下這行放在最後一行
+# 底下這段放在檔案最後
 urlpatterns += static(
-    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    settings.MEDIA_URL, 
+    document_root=settings.MEDIA_ROOT
+)
